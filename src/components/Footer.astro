@@ -1,15 +1,16 @@
 ---
 import Container from "./Container.astro"
 ---
-<footer class="bg-lime bg-fixed bg-bottom text-black">
+<footer class="bg-black bg-fixed bg-bottom text-black">
     <Container>
     <div class="py-6">
         <div class="flex flex-col items-center justify-between md:flex-row">
             <div class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img class="w-auto" src="/Logo.svg" alt="Logo">
-            </div>
+                <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <h1 class="text-2xl font-semibold text-[#ffa31a] ml-4">Dev Hub</h1>
+                </a>            </div>
             <div class="flex mt-4 md:m-0">
-                <div class="-mx-4">
+                <div class="-mx-4 text-[#ffa31a]">
                     @ <span id="currentYear"></span> DevHub | Hecho con <a href="https://astro.build/" target="_blank" rel="noopener noreferrer" class="underline">Astro</a></div>
                 </div>
             </div>
