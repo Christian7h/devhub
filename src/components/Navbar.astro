@@ -5,7 +5,7 @@ const navLinks = [
   { href: '/pricing', label: 'Precios' },
   { href: '/#projects', label: 'Proyectos' },
   { href: '/articles', label: 'Blog'},
-  { href: '/about', label: 'Acerca de' },
+  { href: '/about', label: 'Sobre nosotros' },
 ];
 
 const navButton = { href: '', label: 'Contactanos' };
@@ -16,15 +16,16 @@ import Container from "./Container.astro"
 <header class="mt-28">
 <nav class="w-full top-0 left-0 z-50 fixed bg-[#292929]">
   <Container>
-    <div class="flex flex-wrap items-center justify-between mx-auto py-3">
-      <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <h1 class="text-2xl font-semibold text-white ml-4">Dev  <span class="bg-lime text-black p-2 rounded-md">Hub</span></h1>
+    <div class="flex flex-wrap items-center justify-between mx-auto py-3 ">
+      <a href="/" class="flex flex-col gap-2 max-[572px]:flex-row ">
+          <h1 class="text-4xl font-semibold text-white ml-4 gap-1">Dev  <span class="bg-lime text-black p-1 rounded-md">Hub</span></h1>
+          <h3 class="text-blanco max-[572px]:hidden">Tu Web Nuestro Codigo</h3>
       </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 " aria-controls="navbar-default" aria-expanded="false">
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center bg-white text-sm rounded-lg md:hidden focus:outline-none focus:ring-2  " aria-controls="navbar-default" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24 " stroke-width="1.5 " stroke="currentColor " class="size-6  ">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5 " />
+          </svg>          
       </button>
       
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
