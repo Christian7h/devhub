@@ -13,13 +13,13 @@ const navButton = { href: '', label: 'Contactanos' };
 import Container from "./Container.astro"
 ---
 
-<header class="mt-28">
-<nav class="w-full top-0 left-0 z-50 fixed bg-[#292929]">
+<header>
+<nav class="w-[70%] mx-auto mt-4 top-3 z-50 bg-[#292929] rounded-3xl">
   <Container>
-    <div class="flex flex-wrap items-center justify-between mx-auto py-3 ">
+    <div class="flex flex-wrap items-center justify-between mx-auto py-3">
       <a href="/" class="flex flex-col gap-2 max-[572px]:flex-row ">
-          <h1 class="text-4xl font-semibold text-white ml-4 gap-1">Dev  <span class="bg-lime text-black p-1 rounded-md">Hub</span></h1>
-          <h3 class="text-blanco max-[572px]:hidden">Tu Web Nuestro Codigo</h3>
+          <h1 class="text-4xl font-semibold text-white ml-4">Dev <span class="bg-lime text-black rounded-md">Hub</span></h1>
+          <h3 class="text-blanco max-[572px]:hidden ml-1">Tu Web Nuestro Codigo</h3>
       </a>
       <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center bg-white text-sm rounded-lg md:hidden focus:outline-none focus:ring-2  " aria-controls="navbar-default" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
@@ -44,7 +44,7 @@ import Container from "./Container.astro"
       </div>
 
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <a class="px-9 py-5 rounded-2xl border border-[#ffa31a] bg-[#292929] hover:bg-[#ffa31a] text-[#ffa31a] hover:text-[#050601] inline-flex" href={navButton.href} target="_blank">
+        <a class="px-5 py-3 rounded-2xl border border-[#ffa31a] bg-[#292929] hover:bg-[#ffa31a] text-[#ffa31a] hover:text-[#050601] inline-flex" href={navButton.href} target="_blank">
           <h2 class="text-center text-xl font-normal leading-7">{navButton.label}</h2>
         </a>
       </div>
