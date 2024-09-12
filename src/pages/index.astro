@@ -1,17 +1,15 @@
 ---
+import Gallery from '../components/gallery.astro';
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
 ---
-
 <Layout title="DevHub">
 	<main class="bg-lime">
 		<div class="flex justify-center items-center mt-4">
 			<h1 id="typewriter" class="text-4xl font-bold"></h1>
 		</div>
-		
 		<Hero/>
-	
-		
+		<Gallery/>
 </Layout>
 
 <script is:inline>
