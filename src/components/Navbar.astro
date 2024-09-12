@@ -96,7 +96,7 @@ import Container from "./Container.astro";
 
 <script is:inline>
 
-    document.addEventListener("DOMContentLoaded","astro:page-load", () => {
+    document.addEventListener("astro:page-load", () => {
       const navbar = document.getElementById("navbar-default");
 
       // Check if navbar exists before adding event listeners
