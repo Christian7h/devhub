@@ -12,9 +12,8 @@ const navButton = { href: "", label: "Contactanos" };
 
 import Container from "./Container.astro";
 ---
-
 <header>
-  <nav class="w-[70%] mx-auto mt-4 top-3 z-50 bg-[#292929] rounded-3xl">
+  <nav class="fill w-[70%] mx-auto mt-4 top-3 z-50 bg-[#292929] rounded-3xl">
     <Container>
       <div class="flex flex-wrap items-center justify-between mx-auto py-3">
         <a href="/" class="flex flex-col gap-2 max-[572px]:flex-row">
@@ -36,34 +35,31 @@ import Container from "./Container.astro";
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            viewBox="0 0 24 24 "
-            stroke-width="1.5 "
-            stroke="currentColor "
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
             class="size-6"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5 "></path>
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            ></path>
           </svg>
         </button>
 
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-[#292929]"
-          >
-            {
-              navLinks.map((link) => (
-                <li>
-                  <a
-                    href={link.href}
-                    class="block py-2 px-3 text-[#f6f5ff] hover:text-white rounded md:bg-transparent md:p-0"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))
-            }
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-[#292929]">
+            {navLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="nav-link block py-2 px-3 text-[#f6f5ff] hover:text-white rounded md:bg-transparent md:p-0"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
             <li>
               <a
                 class="md:hidden px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex"
@@ -93,7 +89,36 @@ import Container from "./Container.astro";
     </Container>
   </nav>
 </header>
-
+<style>
+  /* Apply underline fill effect */
+  .nav-link {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .nav-link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background: #ffffff;
+    height: 2px;
+    transition: width 0.4s, opacity 0.4s;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+    opacity: 1;
+  }
+  
+  .nav-link:hover {
+    color: #ceff1a;
+  }
+</style>
 <script is:inline>
 
     document.addEventListener("astro:page-load", () => {
