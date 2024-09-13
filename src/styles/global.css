@@ -26,11 +26,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ffa31a;
+  background: #ceff1a;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e0ba81;
+  background: #191A23;
 }
 
 /* markdown style */
