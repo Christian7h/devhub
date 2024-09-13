@@ -20,9 +20,6 @@ import Container from "./Container.astro";
           <h1 class="text-4xl font-semibold text-[#f6f5ff] ml-4">
             Dev <span class="bg-lime text-black rounded-md">Hub</span>
           </h1>
-          <h3 class="text-blanco max-[572px]:hidden ml-1">
-            Tu Web Nuestro Codigo
-          </h3>
         </a>
         <button
           data-collapse-toggle="navbar-default"
@@ -74,15 +71,11 @@ import Container from "./Container.astro";
           </ul>
         </div>
 
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <a
-            class="px-5 py-3 rounded-2xl border border-[#ceff1a] bg-[#292929] hover:bg-[#f6f5ff] text-[#f6f5ff] hover:text-[#050601] inline-flex"
-            href={navButton.href}
-            target="_blank"
-          >
-            <h2 class="text-center text-xl font-normal leading-7">
-              {navButton.label}
-            </h2>
+        <div class="flex flex-wrap justify-center gap-6 " id="navbar-default">
+          <a class="relative group hidden lg:block" href="#">
+            <span class="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-white"></span>
+            <span class="relative inline-block h-full w-full rounded border-2 bg-black border-[#f6f5ff] hover:bg-[#ceff1a] hover:text-black px-3 py-1 text-base font-bold text-[#f6f5ff] transition-transform transform group-hover:translate-y-1 hover:translate-x-1 group-hover:shadow-lg duration-300">
+              Contact Us</span>
           </a>
         </div>
       </div>
@@ -120,7 +113,6 @@ import Container from "./Container.astro";
   }
 </style>
 <script is:inline>
-
     document.addEventListener("astro:page-load", () => {
       const navbar = document.getElementById("navbar-default");
 
