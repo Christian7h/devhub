@@ -1,77 +1,145 @@
 ---
 // Define your navigation links here
 const navLinks = [
-  { href: '/#services', label: 'Servicios' },
-  { href: '/pricing', label: 'Precios' },
-  { href: '/#projects', label: 'Proyectos' },
-  { href: '/articles', label: 'Blog'},
-  { href: '/about', label: 'Sobre nosotros' },
+  { href: "/#services", label: "Servicios" },
+  { href: "/pricing", label: "Precios" },
+  { href: "/#projects", label: "Proyectos" },
+  { href: "/articles", label: "Blog" },
+  { href: "/about", label: "Sobre nosotros" },
 ];
 
-const navButton = { href: '', label: 'Contactanos' };
+const navButton = { href: "", label: "Contactanos" };
 
-import Container from "./Container.astro"
+import Container from "./Container.astro";
 ---
-
-<header class="mt-28">
-<nav class="w-full top-0 left-0 z-50 fixed bg-[#292929]">
-  <Container>
-    <div class="flex flex-wrap items-center justify-between mx-auto py-3 ">
-      <a href="/" class="flex flex-col gap-2 max-[572px]:flex-row ">
-          <h1 class="text-4xl font-semibold text-white ml-4 gap-1">Dev  <span class="bg-lime text-black p-1 rounded-md">Hub</span></h1>
-          <h3 class="text-blanco max-[572px]:hidden">Tu Web Nuestro Codigo</h3>
-      </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center bg-white text-sm rounded-lg md:hidden focus:outline-none focus:ring-2  " aria-controls="navbar-default" aria-expanded="false">
+<header>
+  <nav class="fill w-[70%] mx-auto mt-4 top-3 z-50 bg-[#292929] rounded-3xl">
+    <Container>
+      <div class="flex flex-wrap items-center justify-between mx-auto py-3">
+        <a href="/" class="flex flex-col gap-2 max-[572px]:flex-row">
+          <h1 class="text-4xl font-semibold text-[#f6f5ff] ml-4">
+            Dev <span class="bg-lime text-black rounded-md">Hub</span>
+          </h1>
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center bg-white text-sm rounded-lg md:hidden focus:outline-none focus:ring-2"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
           <span class="sr-only">Open main menu</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24 " stroke-width="1.5 " stroke="currentColor " class="size-6  ">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5 " />
-          </svg>          
-      </button>
-      
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-[#292929]"> 
-            {navLinks.map(link => (
-            <li>
-                <a href={link.href} class="block py-2 px-3 text-[#ffa31a] hover:text-white rounded md:bg-transparent md:p-0">{link.label}</a>
-            </li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            ></path>
+          </svg>
+        </button>
+
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-[#292929]">
+            {navLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="nav-link block py-2 px-3 text-[#f6f5ff] hover:text-white rounded md:bg-transparent md:p-0"
+                >
+                  {link.label}
+                </a>
+              </li>
             ))}
             <li>
-                <a class="md:hidden px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" href={navButton.href} target="_blank">
-                  <h2 class="text-center text-xl font-normal leading-7">{navButton.label}</h2>
-                </a>
+              <a
+                class="md:hidden px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex"
+                href={navButton.href}
+                target="_blank"
+              >
+                <h2 class="text-center text-xl font-normal leading-7">
+                  {navButton.label}
+                </h2>
+              </a>
             </li>
-        </ul>
-      </div>
+          </ul>
+        </div>
 
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <a class="px-9 py-5 rounded-2xl border border-[#ffa31a] bg-[#292929] hover:bg-[#ffa31a] text-[#ffa31a] hover:text-[#050601] inline-flex" href={navButton.href} target="_blank">
-          <h2 class="text-center text-xl font-normal leading-7">{navButton.label}</h2>
-        </a>
+        <div class="flex flex-wrap justify-center gap-6 " id="navbar-default">
+          <a class="relative hidden lg:block" href="#">
+            <span class="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-white"></span>
+            <span class="relative inline-block h-full w-full rounded border-2 bg-black border-[#f6f5ff] hover:bg-[#ceff1a] hover:text-black px-3 py-1 text-base font-bold text-[#f6f5ff] transition-transform transform group-hover:translate-y-1 hover:translate-x-1 group-hover:shadow-lg duration-300">
+              Contact Us</span>
+          </a>
+        </div>
       </div>
-    </div>
-  </Container>
-</nav>
+    </Container>
+  </nav>
 </header>
-
-<script is:inline>
-document.addEventListener('DOMContentLoaded', () => {
-  const navbar = document.getElementById('navbar-default');
-
-  // Check if navbar exists before adding event listeners
-  if (navbar) {
-    const toggleButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
-    const navLinks = navbar.querySelectorAll('a');
-
-    if (toggleButton) {
-      toggleButton.addEventListener('click', () => navbar.classList.toggle('hidden'));
-    } else {
-      console.warn("Navbar toggle button not found. Toggle functionality might be affected.");
-    }
-
-    navLinks.forEach(link => link.addEventListener('click', () => navbar.classList.add('hidden')));
-  } else {
-    console.warn("Navbar element with ID 'navbar-default' not found. Navigation functionality might be affected.");
+<style>
+  /* Apply underline fill effect */
+  .nav-link {
+    position: relative;
+    display: inline-block;
   }
-});
+  
+  .nav-link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background: #ffffff;
+    height: 2px;
+    transition: width 0.4s, opacity 0.4s;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+    opacity: 1;
+  }
+  
+  .nav-link:hover {
+    color: #ceff1a;
+  }
+</style>
+<script is:inline>
+    document.addEventListener("astro:page-load", () => {
+      const navbar = document.getElementById("navbar-default");
 
+      // Check if navbar exists before adding event listeners
+      if (navbar) {
+        const toggleButton = document.querySelector(
+          '[data-collapse-toggle="navbar-default"]',
+        );
+        const navLinks = navbar.querySelectorAll("a");
+
+        if (toggleButton) {
+          toggleButton.addEventListener("click", () =>
+            navbar.classList.toggle("hidden"),
+          );
+        } else {
+          console.warn(
+            "Navbar toggle button not found. Toggle functionality might be affected.",
+          );
+        }
+
+        navLinks.forEach((link) =>
+          link.addEventListener("click", () => navbar.classList.add("hidden")),
+        );
+      } else {
+        console.warn(
+          "Navbar element with ID 'navbar-default' not found. Navigation functionality might be affected.",
+        );
+      }
+    });
 </script>
