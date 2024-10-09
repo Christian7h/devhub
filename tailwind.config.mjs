@@ -42,7 +42,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				"Oswald": ['sans-serif', 'serif'],
+				'protest': ['"Protest Guerrilla"', 'sans-serif'],
 			},
 		},
 	},
