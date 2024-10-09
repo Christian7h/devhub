@@ -26,7 +26,6 @@
     }
 
     function closeModal(event) {
-        // Evita que el evento se propague si se hace clic en la imagen
         if (event.target.tagName !== 'IMG') {
             const modal = document.getElementById('modal');
             modal.style.display = 'none';
