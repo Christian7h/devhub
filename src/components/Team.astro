@@ -41,9 +41,10 @@ import Accordion from "./Accordion.astro";
                     <div class="h-[102.82px] left-0 top-0 relative">
                         <img src={profile} alt={name} class="w-24 rounded-lg"/>
                     </div>
+                    
                     <div class="flex-col justify-end items-start inline-flex">
                         <div class="text-lg font-normal">{title}</div>
-                        <div class="text-xl font-medium">{name}</div>
+                        <div class="text-xl font-medium bg-slate-800 w-max max-w-xs text-black rounded-lg px-4 py-4">{name}</div>
                     </div>
                 </div>
                 <a class="top-0 right-0" href={link}>
@@ -51,7 +52,36 @@ import Accordion from "./Accordion.astro";
                 </a>
             </div>
             <hr class="w-full border border-black"/>
-            <p class="text-sm md:text-lg">{description}</p>
+            
+
+
+
+
+            <div class="relative group mx-auto">
+        <p class="text-slate-800 font-mono font-bold cursor-pointer">informacion</p>
+         <div
+            class="absolute left-1/2 -translate-x-1/2 top-full mb-2 opacity-0 group-hover:opacity-100 transition duration-100 transform group-hover:-translate-y-0 -translate-y-2">
+        <div class="bg-[#CEFF1A] w-max max-w-xs text-black rounded-lg px-4 py-4">
+        <p class="font-bold text-md mb-1">Hello there! 👋</p>
+        <p class="">{description}</p>
+</div>
+</div>
+</div>
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
     ))
