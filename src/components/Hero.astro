@@ -4,17 +4,19 @@ import Container from "./Container.astro"
 <Container>
 <div class="relative flex flex-col-reverse items-center md:flex-row text-[#f6f5ff]" id="hero">
     <div class="row items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
-        <div class="text-left space-y-3">
-            <h1 class="text-5xl md:text-6xl font-medium leading-none text-ceff1a neon neon-animation">
+        <div class="text-left space-y-3 p-1">
+            <h1 class="text-5xl md:text-6xl font-medium leading-none text-[#ffff] neon neon-animation">
                 Tu página web <br> tu proyecto <br> nuestro código
-            </h1>           <p class="mt-6 mb-8  text-xl font-normal leading-7 sm:mb-12"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est accusantium alias provident quidem. Perferendis possimus in fuga ea qui nam, enim libero necessitatibus natus officia atque sapiente est sed animi.</p>
+            </h1>           
+            <p inline-block class=" mt-[3rem] mb-8  text-xl font-normal leading-7 sm:mb-12 "> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est accusantium alias provident quidem. Perferendis possimus in fuga ea qui nam, enim libero necessitatibus natus officia atque sapiente est sed animi.</p>
             <a class="px-9 py-5 bg-zinc-900 hover:bg-[#ceff1a] border-2 hover:border-[#f6f5ff] text-white hover:text-black rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex" rel="noopener noreferrer" href="/">
                 <h2 class="text-center text-xl font-normal leading-7">Explora</h2>
             </a>
         </div>
     </div>
+   
     <div class="flex items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
-        <img src="/bocchi.webp" width="100%" class="rounded-lg" alt="Hero"/>
+        <img src="/public/logoprincipal.png" alt="" class="image fixd">
     </div>    
 </div>
 </Container>
@@ -54,4 +56,17 @@ import Container from "./Container.astro"
     .neon-animation {
         animation: neon 2.5s ease-in-out infinite alternate;
     }
+    .image {
+        width: 100%;
+        height: auto;
+        border: 0 solid black;
+        border-radius: 1rem;
+        
+        
+    }
+   .fixd{
+        background-attachment:fixed ;
+   }
+    
+    
 </style>
